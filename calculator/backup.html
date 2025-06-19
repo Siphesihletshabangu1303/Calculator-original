@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+<h1 id="heading"onclick="changeText()">JavaScript</h1>
+<P id="addition"></P>
+
+<script>
+    document.getElementById("addition").innerHTML=addNumbers(10, 7);
+
+function changeText(){
+    if(document.getElementById("heading").innerHTML=='JavaScript'){
+        document.getElementById("heading").innerHTML='Is aweseome'
+    } else {
+        document.getElementById("heading").innerHTML='JavaScript'}
+}
+
+
+function addNumbers(num1, num2){
+return num1 + num2; 
+
+}
+
+</script>
+
+</body>
+</head>
+
+</html>
+
+
+
+
+
+
+
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+    <p id="outputText"></p>
+    <script>
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    </head>
+    <body>
+    <label for="weather">What's the weather like?</label>
+    <select id="weather">
+        <option value="sunny">Sunny</option>
+        <option value="windy">Windy</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowy">Snowy</option>
+        <option value="Cloudy">Cloudy</option>
+
+ </select>
+<a href="#" onclick="btnPressed()">GO!</a>
+<p id="outputText">Weather advice:</p>        
+    
+      <script>
+    function btnPressed(){
+    var weatherSelected = document.getElementById("weather").value;
+        var advice;
+
+        switch(weatherSelected){
+            case "sunny":
+                advice = "wear your glasses";
+                break;
+
+        }
+
+document.getElementById(outputText).innerHTML = "weather advice" + advice;
+    }
+    
+    
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <p>Welcome, please log in</p>
+    <form onsubmit="event.preventDefault(); verifyUser();">
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" required /><br/>
+        <label for="passwordInput">Password:</label>
+        <input type="password" id="passwordInput" required /><br/>
+        <p id="message"></p>
+        <br/>
+        <button type="submit">Log in</button>
+    </form>
+
+    <script>
+        function verifyUser() {
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            var messageElement = document.getElementById("message");
+
+            // Basic client-side validation (for demo purposes only)
+            if (username === "" || password === "") {
+                messageElement.style.color = "red";
+                messageElement.textContent = "Please fill in all fields.";
+                return;
+            }
+
+            // Example: Check for a hardcoded username and password (not secure!)
+            if (username === "admin" && password === "password123") {
+                messageElement.style.color = "green";
+                messageElement.textContent = "Login successful!";
+                // In a real app, redirect to another page or send data to server
+            } else {
+                messageElement.style.color = "red";
+                messageElement.textContent = "Invalid username or password.";
+            }
+        }
+    </script>
+</body>
+</html>
